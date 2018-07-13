@@ -1,13 +1,28 @@
 public class Queue {
-   // your code is here
+   int[] arr =new int[3];
+   int counter =0;
+   int count2 =0;
+
+
     public void push(int pushedElement){
-       //your code is here
+       if(size>=3)
+       { System.out.println("overflow");
+   }
+     else arr[size++]= pushedElement;
     }
+
+
+
     public void pop(){
-        //your code is here
+      arr[i] = arr[i+1];
+     counter--;
     }
+
+
     public void display(){
-        //your code is here
+     for (int i = 0; i <arr.length; i++) {
+      System.out.println(arr[i]);
+     }
     }
 
 }
