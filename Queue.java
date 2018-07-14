@@ -1,28 +1,43 @@
-public class Queue {
-   int[] arr =new int[3];
-   int counter =0;
-   int count2 =0;
+import java.util.Arrays;
 
 
-    public void push(int pushedElement){
-       if(size>=3)
-       { System.out.println("overflow");
-   }
-     else arr[size++]= pushedElement;
-    }
+public class Queue{
 
+int [] arr=new int [3];
+  int front=0;
+  int rear=0;
+  int numberelem=0;
+     
+
+     public void push(int elem){
+     if(numberelem<3){
+      arr[rear]=elem;
+      rear++;
+      numberelem++;
+                 
+        }
+        else {
+          System.out.println("overflow");
+        }
+      }
 
 
     public void pop(){
-      arr[i] = arr[i+1];
-     counter--;
-    }
+         if(numberelem>0){
+          arr[front]="-1";
+          front++;
+          numberelem--;
+         }
+         else{
+          System.out.println("queue is empty");
+         }
+   
 
+    }
 
     public void display(){
-     for (int i = 0; i <arr.length; i++) {
-      System.out.println(arr[i]);
-     }
+      for(int i=0;i<3;i++){
+        System.out.println(arr[i]);
+      }
     }
-
 }
